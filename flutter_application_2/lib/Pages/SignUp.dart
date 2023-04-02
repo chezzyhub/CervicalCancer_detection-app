@@ -51,7 +51,7 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Email',
                   hintText: 'Enter your email',
                 ),
@@ -67,7 +67,7 @@ class SignUpPage extends StatelessWidget {
                 },
               ),
               TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Password',
                   hintText: 'Enter your password',
                 ),
@@ -89,7 +89,7 @@ class SignUpPage extends StatelessWidget {
                     _signUpWithEmailAndPassword();
                   }
                 },
-                child: Text('Sign Up'),
+                child: const Text('Sign Up'),
               ),
             ],
           ),

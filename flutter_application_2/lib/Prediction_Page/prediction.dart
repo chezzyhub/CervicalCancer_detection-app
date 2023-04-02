@@ -24,6 +24,7 @@ class _PredictionState extends State<Prediction> {
   // ignore: unused_field
   String _prediction = '';
   
+  // ignore: prefer_typing_uninitialized_variables
   var value;
 
   // ignore: unused_element
@@ -59,7 +60,7 @@ class _PredictionState extends State<Prediction> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text('mapema best'),
+        title: const Text('mapema best'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -127,7 +128,7 @@ class _PredictionState extends State<Prediction> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                     ),
-                    child: Text('VIEW RESULTS'),
+                    child: const Text('VIEW RESULTS'),
                   ),
                   ElevatedButton(
                 onPressed: () {
@@ -135,13 +136,13 @@ class _PredictionState extends State<Prediction> {
               context,
               MaterialPageRoute(builder: (context) => LoginPage()),
                ); }, 
-                  // TODO: Proceed and take a tet,
+                  //  Proceed and take a tet,
                 child: const Text('Visit Doctor'),
               ),
               ],
             )
          ) ,
         ),
-      );;;
+      );
   }
 } 

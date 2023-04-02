@@ -62,14 +62,14 @@ String _selectedHospital = '';
               },
             ),
             SizedBox(height: 20.0),
-            Text(
+            const Text(
               'Choose Your Preferred Hospital',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             DropdownButton<String>(
               value: _selectedHospital,
               items: _hospitals.map((hospital) {
