@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_2/Pages/login.dart';
 
 // ...
 
@@ -83,12 +84,15 @@ class SignUpPage extends StatelessWidget {
                 },
               ),
               ElevatedButton(
-                onPressed: () {
+                onPressed: () { 
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
                     _signUpWithEmailAndPassword();
                   }
-                },
+                  Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => LoginPage())
+              );},
                 child: const Text('Sign Up'),
               ),
             ],

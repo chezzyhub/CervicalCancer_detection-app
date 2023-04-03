@@ -126,9 +126,9 @@ class _PredictionState extends State<Prediction> {
                       // Add logic to visit doctor here...
                      },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue,
+                      backgroundColor: Color.fromARGB(255, 4, 214, 165),
                     ),
-                    child: const Text('VIEW RESULTS'),
+                    child: const Text('View Results'),
                   ),
                   ElevatedButton(
                 onPressed: () {
@@ -136,6 +136,7 @@ class _PredictionState extends State<Prediction> {
               context,
               MaterialPageRoute(builder: (context) => LoginPage()),
                ); }, 
+               
                   //  Proceed and take a tet,
                 child: const Text('Visit Doctor'),
               ),

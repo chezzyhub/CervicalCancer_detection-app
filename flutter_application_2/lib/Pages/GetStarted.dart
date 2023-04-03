@@ -10,7 +10,7 @@ class getstarted extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final backgroundImage = AssetImage('assets/image.jpeg');
-    final buttonColor = Colors.blue;
+    final buttonColor = Color.fromARGB(255, 33, 243, 205);
     final buttonText = 'Get Started';
 
     return MaterialApp(

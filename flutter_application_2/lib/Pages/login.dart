@@ -101,6 +101,8 @@ class _LoginPageState extends State<LoginPage> {
         );}} */
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/Pages/SignUp.dart';
+import 'package:flutter_application_2/Pages/home_page.dart';
 import 'package:flutter_application_2/components/my_button.dart';
 import 'package:flutter_application_2/components/my_textfield.dart';
 import 'package:flutter_application_2/components/square_tile.dart';
@@ -209,7 +211,7 @@ try {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Color.fromARGB(255, 245, 252, 250),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -219,7 +221,7 @@ try {
 
               // logo
               const Icon(
-                Icons.lock,
+                Icons.lock_person,
                 size: 100,
               ),
 
@@ -227,9 +229,9 @@ try {
 
               // welcome back, you've been missed!
               Text(
-                'Welcome back you\'ve been missed!',
+                'Log in to visit doctor',
                 style: TextStyle(
-                  color: Colors.grey[700],
+                  color: Color.fromARGB(255, 2, 6, 5),
                   fontSize: 16,
                 ),
               ),
@@ -271,12 +273,21 @@ try {
               const SizedBox(height: 25),
 
               // sign in button
-              MyButton(
+              /* MyButton(
                 onTap: signUserIn,
               ),
 
               const SizedBox(height: 50),
-
+            
+ */
+ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+               ); }, 
+                child: const Text('LOG IN'),
+              ),
               // or continue with
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -292,7 +303,7 @@ try {
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
                         'Or continue with',
-                        style: TextStyle(color: Colors.grey[700]),
+                        style: TextStyle(color: Color.fromARGB(255, 18, 213, 187)),
                       ),
                     ),
                     Expanded(
@@ -331,20 +342,27 @@ try {
                     'Not a member?',
                     style: TextStyle(color: Colors.grey[700]),
                   ),
-                  const SizedBox(width: 4),
+ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+               ); }, 
+               
+                child: const Text('LOG IN'),
+              ),
+                  /* const SizedBox(width: 4),
                   const Text(
                     'Register now',
                     style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold,
-                    ),
+                      color: Color.fromARGB(255, 15, 162, 115),
+                      fontWeight: FontWeight.bold, */
+                ],
                   ),
                 ],
               )
-            ],
-          ),
         ),
-      ),
-    );
-  }
+          )
+          );
+       }
 }
